@@ -37,6 +37,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap5-toggle@5.0.4/css/bootstrap5-toggle.min.css" rel="stylesheet">
     <link rel="stylesheet" href="cursor.css">
     <link rel="stylesheet" href="assets/css/mystyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <style>
         .front {
@@ -693,7 +694,7 @@
                             <div class="card box-shadow-1">
                                 <div class="card-header">
                                     <h4 class="card-header-title color-o">
-                                        <i class='bx bx-map-alt bx-xs card-header-title-icon'></i>RECEIPT DETAILS
+                                        <i class='bx bxs-receipt'></i>RECEIPT DETAILS
                                     </h4>
                                 </div>
                                 <div class="card-body">
@@ -815,7 +816,7 @@
     <div class="card box-shadow-1">
         <div class="card-header">
             <h4 class="card-header-title color-o">
-                <i class='bx bx-map-alt bx-xs card-header-title-icon'></i>
+                <i class='bx bxs-dollar-circle'></i>
                 CASH DETAILS
             </h4>
         </div>
@@ -827,7 +828,7 @@
                             <button class="bg-gr color-dg input-icon-button" disabled type="button" id="button-addon2">
                                 <i class='bi bi-123'></i>
                             </button>
-                            <input type="text" id="cash1" class="form-control" onkeyup="addSeparatorscash(this)" required
+                            <input type="text" id="cash1" class="form-control" oninput="addSeparatorscash(this)" required
                                 aria-describedby="button-addon2" placeholder="Cash Amount" required>
                         </div>
                     </div>
@@ -854,7 +855,7 @@
                                 <div class="card box-shadow-1">
                                     <div class="card-header" >
                                         <h4 class="card-header-title color-o">
-                                            <i class='bx bx-map-alt bx-xs card-header-title-icon'></i>
+                                            <i class='bx bx-money'></i>
                                             CHEQUE DETAILS
                                         </h4>
                                     </div>
@@ -904,7 +905,7 @@
                                                     id="button-addon2">
                                                     <i class='bi bi-123'></i>
                                                 </button>
-                                                <input type="text" id="cheque1" class="form-control" onkeyup="addSeparatorscheque(this) " required
+                                                <input type="text" id="cheque1" class="form-control" oninput="addSeparatorscheque(this) " required
                                                     aria-describedby="button-addon2" placeholder="Cheque Amount" required>
                                                  
                                             </div>
@@ -918,7 +919,7 @@
                                 <div class="card box-shadow-1">
                                     <div class="card-header" >
                                         <h4 class="card-header-title color-o">
-                                            <i class='bx bx-map-alt bx-xs card-header-title-icon'></i>
+                                            <i class='bx bxs-bank' ></i>
                                             BANK TRANSFER DETAILS
                                         </h4>
                                     </div>
@@ -954,7 +955,7 @@
                                                         id="button-addon2">
                                                         <i class='bi bi-123'></i>
                                                     </button>
-                                                    <input type="text" id="bank1" class="form-control" onkeyup="addSeparatorsbank(this)" required
+                                                    <input type="text" id="bank1" class="form-control" oninput="addSeparatorsbank(this)" required
                                                     aria-describedby="button-addon2" placeholder="Bank Transfer Amount" required>
                                                      
                                                 </div>
@@ -969,7 +970,7 @@
                             <div class="card box-shadow-1">
                                 <div class="card-header" >
                                     <h4 class="card-header-title color-o">
-                                        <i class='bx bx-map-alt bx-xs card-header-title-icon'></i>
+                                        <i class='bx bxs-credit-card-alt'></i>
                                         CARD DETAILS
                                     </h4>
                                 </div>
@@ -1017,7 +1018,7 @@
                                                     id="button-addon2">
                                                     <i class='bi bi-123'></i>
                                                 </button>
-                                                <input type="text" id="card1" class="form-control" onkeyup="addSeparatorscard(this)" required
+                                                <input type="text" id="card1" class="form-control" oninput="addSeparatorscard(this)" required
                                                     aria-describedby="button-addon2" placeholder="Card Payment Amount" required>
                                                  
                                             </div>
@@ -1040,7 +1041,7 @@
                                                     id="button-addon2">
                                                     <i class='bi bi-123'></i>
                                                 </button>
-                                                <input type="text" id="Receipt1" class="form-control" onkeyup="addSeparatorsReceipt(this)" required
+                                                <input type="text" id="Receipt1" class="form-control" oninput="addSeparatorsReceipt(this)" required
                                                 aria-describedby="button-addon2" placeholder="Receipt Amount" required>
                                                  
                                             </div>
@@ -1411,6 +1412,8 @@ document.getElementById("buttonAddon1").value = "buttonAddon1";
 
     }
 </script> -->
+
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
 
 </body>
