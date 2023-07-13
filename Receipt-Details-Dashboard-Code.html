@@ -869,7 +869,7 @@
                                                         id="buttonAddon1">
                                                         <i class="bi bi-bank"></i>
                                                     </button>
-                                                    <input type="number" id="numberInput" class="form-control" required
+                                                    <input type="number" id="numberinput1" class="form-control"oninput="eCharacterRemover1(this) " required
                                                         aria-describedby="button-addon2" placeholder="Cheque Amount" required>
                                                 </div>
                                             </div>
@@ -995,7 +995,7 @@
                                                     id="buttonAddon2">
                                                     <i class='bi bi-123'></i>
                                                 </button>
-                                                <input type="number" id="input4" class="form-control" required
+                                                <input type="number" id="input400" class="form-control" oninput="eCharacterRemover(this)" required
                                                 aria-describedby="button-addon2" placeholder="Card Number" required>
                                                 
                                             </div>
@@ -1050,9 +1050,10 @@
                                         <div class="col-md-7 col-sm-12 col-xs-12">
                                             <label class="card-body-title-header">Remarks</label>
                                             <div class="input-group mb-3">
-                                                <textarea class="form-control" id="buttonAddon2" cols="50" rows="1" required
+                                                <!-- <textarea  class="form-control" id="buttonAddon2" cols="50" rows="1" required
                                                     aria-describedby="button-addon2" required>
-                                                </textarea>
+                                                </textarea> -->
+                                               <textarea rows="1" cols="50" class="form-control"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -1304,6 +1305,45 @@
         }
     }
 </script>
+
+<!--REMOVING "e" CHARACTER FUNCTION-->
+
+<script>
+    function eCharacterRemover() {
+        var numberInput = document.getElementById("input400");
+        var number = numberInput.value;
+
+        // Remove any existing separators
+        var cleanedNumber = number.replace(/,/g, "");
+
+        // Convert the cleaned number to a number format
+        var numericValue = parseFloat(cleanedNumber);
+
+        // Check if the numeric value is valid
+        if (isNaN(numericValue)) {
+            numberInput.value = "";
+        }
+    }
+</script>
+
+<script>
+    function eCharacterRemover1() {
+        var numberInput = document.getElementById("numberinput1");
+        var number = numberInput.value;
+
+        // Remove any existing separators
+        var cleanedNumber = number.replace(/,/g, "");
+
+        // Convert the cleaned number to a number format
+        var numericValue = parseFloat(cleanedNumber);
+
+        // Check if the numeric value is valid
+        if (isNaN(numericValue)) {
+            numberInput.value = "";
+        }
+    }
+</script>
+
 
 <!-- NO EDITING ABOVE THIS LINE. THOUSAND SEPARATOR -->
  

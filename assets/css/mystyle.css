@@ -140,7 +140,7 @@ input::placeholder{
 .btn-settlement{
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
-    background-color: var(--color-);
+    background-color: var(--color-gray);
 }
 .btn-settlement:hover{
     background-color: var(--color-dark-gray);
@@ -160,10 +160,10 @@ input::placeholder{
 .btn-back{
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
-    background-color: var(--color-);
+    background-color: var(--color-blue);
 }
 .btn-back:hover{
-    background-color: var(--color-blue);
+    background-color: var(--color-royal-blue);
     color: var(--color-white);
 }
 
