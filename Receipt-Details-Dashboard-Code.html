@@ -39,12 +39,10 @@
     <link rel="stylesheet" href="assets/css/mystyle.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <style>
-        .front {
-        display: none;
-        }
-    </style>
+    
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+   
 </head>
 
 <body>
@@ -87,11 +85,6 @@
                             </span>
                         </button>
 
-                        <!-- <form action="https://www.google.com/" method="post">
-                            <input type="text" name="fname" required>
-                            <input type="submit" value="Submit">
-                          </form> -->
-                          
                         <!-- App Search-->
                         <form class="app-search d-none d-md-block me-2" method="post">
                             <div class="position-relative">
@@ -687,774 +680,226 @@
                         </div>
                     </div>
                     <!-- end page title -->
+
+
+
+                    <form>
+                      <div id="container2" class="front">
+                          <div class="card box-shadow-1">
+                              <div class="card-header" >
+                                  <h4 class="card-header-title color-o">
+                                      <i class='bx bx-money'></i>
+                                      CREATE USER
+                                  </h4>
+                              </div>
+                          
+                              <div class="card-body">
+                                  <div class="row">
+                                      <div class="col-md-6 col-sm-12 col-xs-12">
+                                          <label class="card-body-title-header">First Name</label>
+                                          <div class="input-group mb-3">
+                                              <button class="bg-gr color-dg input-icon-button" disabled type="button"
+                                                  id="buttonAddon1">
+                                                  <i class='bx bxs-user-circle' ></i>
+                                              </button>
+                                              <input type="text" id="cheque1000" class="form-control"oninput="eCharacterRemover1(this) " required
+                                                  aria-describedby="button-addon2" placeholder="First Name" required>
+                                          </div>
+                                      </div>
+                                      <div class="col-md-6 col-sm-12 col-xs-12">
+                                          <label class="card-body-title-header">Last Name</label>
+                                          <div class="input-group mb-3">
+                                              <button class="bg-gr color-dg input-icon-button" disabled type="button"
+                                                  id="buttonAddon1">
+                                                  <i class='bx bxs-user-circle' ></i>
+                                              </button>
+                                              <input type="text" id="cheque1000" class="form-control"oninput="eCharacterRemover1(this) " required
+                                                  aria-describedby="button-addon2" placeholder="Last Name" required>
+                                          </div>
+                                      </div>
+                                      <!-- <div class="col-md-12 col-sm-10col-xs-10">
+                                          <label class="card-body-title-header">Company Name</label>
+                                          <div class="input-group mb-3">
+                                              <button class="bg-gr color-dg input-icon-button" disabled type="button"
+                                                  id="buttonAddon1">
+                                                  <i class="bi bi-bank"></i>
+                                              </button>
+                                              <input type="text" id="cheque3000" class="form-control" required
+                                              aria-describedby="button-addon2" placeholder="Company Name" required>
+                                          </div>
+                                      </div> -->
+                                      <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <label class="card-body-title-header">Company Name</label>
+                                        <div class="input-group mb-3">
+                                            <button class="bg-gr color-dg input-icon-button" disabled type="button" 
+                                                id="button-addon2">
+                                                <i class='bx bxs-home' ></i>
+                                            </button>
+                                            
+                                            <select id="dropdown" type="text" class="form-control" onchange="toggleContainers()" onchange="clearInput()" required="">
+                                                <option value="" required>Please Select A Company</option>
+                                                <option value="container1">Company A</option>
+                                                <option value="container2">Company B</option>
+                                                <option value="container3">Company C</option>
+                                                <option value="container4">Company D</option>
+                                              </select>
+
+                                        </div>
+                                    </div>
+                                      <div class="col-md-6 col-sm-12 col-xs-12">
+                                          <label class="card-body-title-header">Email</label>
+                                          <div class="input-group mb-3">
+                                              <button class="bg-gr color-dg input-icon-button" disabled type="button"
+                                                  id="buttonAddon1">
+                                                  <i class='bx bxs-envelope'></i>
+                                              </button>
+                                              <input type="email" id="cheque1000" class="form-control"oninput="eCharacterRemover1(this) " required
+                                                  aria-describedby="button-addon2" placeholder="Email" required>
+                                          </div>
+                                      </div>
+                                      
+                                      <div class="col-md-6 col-sm-12 col-xs-12">
+                                          <label class="card-body-title-header">Phone</label>
+                                          <div class="input-group mb-3">
+                                              <button class="bg-gr color-dg input-icon-button" disabled type="buttonrequired"
+                                                  id="buttonAddon1">
+                                                  <i class='bx bxs-phone' ></i>
+                                              </button>
+                                              <input type="number" id="card2000" class="form-control" oninput="eCharacterRemover(this) " required
+                                                  aria-describedby="button-addon2" placeholder="Phone" required>
+                                          </div>
+                                      </div>
+                                      <div class="col-md-6 col-sm-12 col-xs-12">
+                                        <label class="card-body-title-header">Password</label>
+                                        <div class="input-group mb-3">
+                                          <button class="bg-gr color-dg input-icon-button" disabled type="button" id="buttonAddon1">
+                                            <i class='bx bxs-lock' ></i>
+                                          </button>
+                                          <input type="password" id="password" class="form-control" required aria-describedby="button-addon2"
+                                            placeholder="Password" required>
+
+                                            <button class="bg-gr color-dg input-icon-button" type="button" id="btnpassword100" onclick="togglePasswordVisibility(this)">
+                                                <i class="bi bi-eye"></i>
+                                              </button>
+                                           
+                                        </div>
+                                      </div>
+                                      <div class="col-md-6 col-sm-12 col-xs-12">
+                                        <label class="card-body-title-header">Confirm Password</label>
+                                        <div class="input-group mb-3">
+                                          <button class="bg-gr color-dg input-icon-button" disabled type="button" id="buttonAddon1">
+                                            <i class='bx bxs-lock' ></i>
+                                          </button>
+                                          <input type="password" id="confirmPassword" class="form-control" required aria-describedby="button-addon2"
+                                            placeholder="Confirm Password" required>
+                                            <button class="bg-gr color-dg input-icon-button" type="button" id="btnconfirmpassword200">
+                                                <i class="bi bi-eye"></i>
+                                              </button>
+                                           
+                                        </div>
+                                      </div>
+                                      <div class="" align="right">
+                                      <!-- <input type="submit" value="Submit" onclick="return validateForm()"> -->
+                                      <input type="submit" value="Create User" class=" btn btn-CreateUser" onclick="return validateForm()"> <a href="#" required></a>
+                                      <input type="submit" value="Clear" class="btn btn-Clear"> <a href="#" required></a>
+                                              </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>  
+                              </div>
+                          </div>
+                      </div>
+                      </div></form>
+
+
+
+                      <script>
+                        function validateForm() {
+                          var password = document.getElementById("password").value;
+                          var confirmPassword = document.getElementById("confirmPassword").value;
                     
-                    <form onsubmit="return false;">
-                    <div class="row" class="container">
-                        <div class="col-md-12">
-                            <div class="card box-shadow-1">
-                                <div class="card-header">
-                                    <h4 class="card-header-title color-o">
-                                        <i class='bx bxs-receipt'></i>RECEIPT DETAILS
-                                    </h4>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-md-3 col-sm-12 col-xs-12" id="456">
-                                            <label class="card-body-title-header">Receipt Number</label>
-                                            <div class="input-group mb-3">
-                                                <button class="bg-gr color-dg input-icon-button" disabled type="button"
-                                                    id="button-addon2">
-                                                    <i class='bi bi-123'></i>
-                                                </button>
-                                                <input type="text" class="form-control not-allowed" required
-                                                    readonly="readonly" id="to-date" aria-describedby="button-addon2" required
-                                                    placeholder="FK-CUS-00002" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 col-sm-12 col-xs-12">
-                                            <label class="card-body-title-header"> Receipt Date</label>
-                                            <div class="input-group mb-3">
-                                                <button class="bg-gr color-dg input-icon-button" disabled type="button"
-                                                    id="button-addon2">
-                                                    <i class="bi bi-calendar-date"></i>
-                                                </button>
-                                                <input type="date" class="form-control" id="myReceiptDate" name="date" required
-                                                    aria-describedby="button-addon2" required
-                                                    placeholder="Receipt Date" required>
-                                                    
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 col-sm-12 col-xs-12">
-                                            <label class="card-body-title-header">Receipt Type</label>
-                                            <div class="input-group mb-3">
-                                                <button class="bg-gr color-dg input-icon-button" disabled type="button" 
-                                                    id="button-addon2">
-                                                    <i class="bi bi-cash-coin"></i>
-                                                </button>
-                                                
-                                                <select id="dropdown" type="text" class="form-control" onchange="toggleContainers()" required>
-                                                    <option value="">Please Select An Option</option>
-                                                    <option value="container1">Cash Option</option>
-                                                    <option value="container2">Cheque Option</option>
-                                                    <option value="container3">Bank Transfer Option</option>
-                                                    <option value="container4">Card Option</option>
-                                                  </select>
+                          if (password !== confirmPassword) {
+                            alert("Passwords do not match. Please try again.");
+                            return false;
+                          }
+                          
+                          // Passwords match, proceed with form submission or other actions
+                          return true;
+                        }
+                      </script>
 
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4 col-sm-12 col-xs-12">
-                                            <label class="card-body-title-header">Customer Name</label>
-                                            <div class="input-group mb-3">
-                                                <button class="bg-gr color-dg input-icon-button" disabled type="button" 
-                                                    id="button-addon2">
-                                                    <i class='bx bxs-user'></i>
-                                                </button>
 
-                                                    <select id="name" type="text" class="form-control" id="to-date" required
-                                                    aria-describedby="button-addon2" required
-                                                    placeholder="Customer Name" required>
-                                                        <option value="">Please Select A Name</option>
-                                                        <option value="Achintha">Achintha</option>
-                                                        <option value="Rajitha">Rajitha</option>
-                                                    </select>
-                                                    
-                                            </div>
-                                        </div>
-                                        
-                                        
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            
-                            <!--CASH DETAILS-->
-                            <!-- <div id="container1" class="front">
-                                <div class="card box-shadow-1">
-                                    <div class="card-header" >
-                                        <h4 class="card-header-title color-o">
-                                            <i class='bx bx-map-alt bx-xs card-header-title-icon'></i>
-                                            CASH DETAILS
-                                        </h4>
-                                    </div>
-                                <form onsubmit="return false;"> -->
-                                    <!-- <form action="" method="post">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-md-4 col-sm-12 col-xs-12">
-                                                <label class="card-body-title-header">Cash Amount</label>
-                                                <div class="input-group mb-3">
-                                                    <button class="bg-gr color-dg input-icon-button" disabled type="button"
-                                                        id="button-addon2">
-                                                        <i class='bi bi-123'></i>
-                                                    </button>
-                                                    <input type="text" id="input1" class="form-control" onkeyup="formatNumber(this)" required
-                                                        aria-describedby="button-addon2" placeholder="Cash Amount" required>
-                                                     
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 col-sm-12 col-xs-12">
-                                                <label class="card-body-title-header"> Receipt Date</label>
-                                                <div class="input-group mb-3">
-                                                    <button class="bg-gr color-dg input-icon-button" disabled type="button"
-                                                        id="button-addon2">
-                                                        <i class="bi bi-calendar-date"></i>
-                                                    </button>
-                                                    <input type="date" id="input1" class="form-control" required
-                                                        aria-describedby="button-addon2" placeholder="Receipt Date" required>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </form> -->
-
-                                <!--CASH DETAILS-->
-<div id="container1" class="front">
-    <div class="card box-shadow-1">
-        <div class="card-header">
-            <h4 class="card-header-title color-o">
-                <i class='bx bxs-dollar-circle'></i>
-                CASH DETAILS
-            </h4>
-        </div>
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-md-4 col-sm-12 col-xs-12">
-                        <label class="card-body-title-header">Cash Amount</label>
-                        <div class="input-group mb-3">
-                            <button class="bg-gr color-dg input-icon-button" disabled type="button" id="button-addon2">
-                                <i class='bi bi-123'></i>
-                            </button>
-                            <input type="text" id="cash1" class="form-control" oninput="addSeparatorscash(this)" required
-                                aria-describedby="button-addon2" placeholder="Cash Amount" required>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12">
-                        <label class="card-body-title-header">Receipt Date</label>
-                        <div class="input-group mb-3">
-                            <button class="bg-gr color-dg input-icon-button" disabled type="button" id="button-addon2">
-                                <i class="bi bi-calendar-date"></i>
-                            </button>
-                            <input type="date" id="input1" class="form-control" required aria-describedby="button-addon2" required
-                                placeholder="Receipt Date" required>
-                            
-                            <!-- <input type="submit" value="Save" class="btn-save"> <a href="#" required></a> -->
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </div>
-</div>
-
-                            <!--CHEQUE DETAILS-->
-                            <div id="container2" class="front">
-                                <div class="card box-shadow-1">
-                                    <div class="card-header" >
-                                        <h4 class="card-header-title color-o">
-                                            <i class='bx bx-money'></i>
-                                            CHEQUE DETAILS
-                                        </h4>
-                                    </div>
-                                
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-md-4 col-sm-12 col-xs-12">
-                                                <label class="card-body-title-header">Cheque Number</label>
-                                                <div class="input-group mb-3">
-                                                    <button class="bg-gr color-dg input-icon-button" disabled type="button"
-                                                        id="buttonAddon1">
-                                                        <i class="bi bi-bank"></i>
-                                                    </button>
-                                                    <input type="number" id="numberinput1" class="form-control"oninput="eCharacterRemover1(this) " required
-                                                        aria-describedby="button-addon2" placeholder="Cheque Amount" required>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 col-sm-12 col-xs-12">
-                                                <label class="card-body-title-header"> Receipt Date</label>
-                                                <div class="input-group mb-3">
-                                                    <button class="bg-gr color-dg input-icon-button" disabled type="button"
-                                                        id="button-addon2">
-                                                        <i class="bi bi-calendar-date"></i>
-                                                    </button>
-                                                    <input type="date" id="input2" class="form-control" required
-                                                        aria-describedby="button-addon2" placeholder="Receipt Date" required>
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 col-sm-12 col-xs-12">
-                                                <label class="card-body-title-header">Cheque Issuing Bank</label>
-                                                <div class="input-group mb-3">
-                                                    <button class="bg-gr color-dg input-icon-button" disabled type="button"
-                                                        id="buttonAddon1">
-                                                        <i class="bi bi-bank"></i>
-                                                    </button>
-                                                    <input type="text" id="input2" class="form-control" required
-                                                    aria-describedby="button-addon2" placeholder="Cheque Issuing Bank" required>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--BELOW THE ROW-->
-                                        <div class="col-md-4 col-sm-12 col-xs-12">
-                                            <label class="card-body-title-header">Cheque Amount</label>
-                                            <div class="input-group mb-3">
-                                                <button class="bg-gr color-dg input-icon-button" disabled type="button"
-                                                    id="button-addon2">
-                                                    <i class='bi bi-123'></i>
-                                                </button>
-                                                <input type="text" id="cheque1" class="form-control" oninput="addSeparatorscheque(this) " required
-                                                    aria-describedby="button-addon2" placeholder="Cheque Amount" required>
-                                                 
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                                
-                            <!--BANK TRANSFER DETAILS-->
-                            <div id="container3" class="front">
-                                <div class="card box-shadow-1">
-                                    <div class="card-header" >
-                                        <h4 class="card-header-title color-o">
-                                            <i class='bx bxs-bank' ></i>
-                                            BANK TRANSFER DETAILS
-                                        </h4>
-                                    </div>
-
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-md-4 col-sm-12 col-xs-12">
-                                                <label class="card-body-title-header">Fund Transfer Bank</label>
-                                                <div class="input-group mb-3">
-                                                    <button class="bg-gr color-dg input-icon-button" disabled type="button"
-                                                        id="buttonAddon1">
-                                                        <i class="bi bi-bank"></i>
-                                                    </button>
-                                                    <input type="text" id="input3" class="form-control" required
-                                                    aria-describedby="button-addon2" placeholder="Fund Transfer Bank" required>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 col-sm-12 col-xs-12">
-                                                <label class="card-body-title-header"> Receipt Date</label>
-                                                <div class="input-group mb-3">
-                                                    <button class="bg-gr color-dg input-icon-button" disabled type="button"
-                                                        id="button-addon2">
-                                                        <i class="bi bi-calendar-date"></i>
-                                                    </button>
-                                                    <input type="date" id="input3" class="form-control" required
-                                                    aria-describedby="button-addon2" placeholder="Receipt Date" required>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 col-sm-12 col-xs-12">
-                                                <label class="card-body-title-header">Bank Transfer Amount</label>
-                                                <div class="input-group mb-3">
-                                                    <button class="bg-gr color-dg input-icon-button" disabled type="button"
-                                                        id="button-addon2">
-                                                        <i class='bi bi-123'></i>
-                                                    </button>
-                                                    <input type="text" id="bank1" class="form-control" oninput="addSeparatorsbank(this)" required
-                                                    aria-describedby="button-addon2" placeholder="Bank Transfer Amount" required>
-                                                     
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                                
-                            <!-- CARD DETAILS -->
-                            <div id="container4" class="front">
-                            <div class="card box-shadow-1">
-                                <div class="card-header" >
-                                    <h4 class="card-header-title color-o">
-                                        <i class='bx bxs-credit-card-alt'></i>
-                                        CARD DETAILS
-                                    </h4>
-                                </div>
-
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-md-4 col-sm-12 col-xs-12">
-                                            <label class="card-body-title-header">Card Issuing Bank</label>
-                                            <div class="input-group mb-3">
-                                                <button class="bg-gr color-dg input-icon-button" disabled type="button"
-                                                    id="buttonAddon1">
-                                                    <i class="bi bi-bank"></i>
-                                                </button>
-                                                <input type="text" id="input4" class="form-control" required
-                                                aria-describedby="button-addon2" placeholder="Card Issuing Bank" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 col-sm-12 col-xs-12">
-                                            <label class="card-body-title-header">Card Number</label>
-                                            <div class="input-group mb-3">
-                                                <button class="bg-gr color-dg input-icon-button" disabled type="button"
-                                                    id="buttonAddon2">
-                                                    <i class='bi bi-123'></i>
-                                                </button>
-                                                <input type="number" id="input400" class="form-control" oninput="eCharacterRemover(this)" required
-                                                aria-describedby="button-addon2" placeholder="Card Number" required>
-                                                
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 col-sm-12 col-xs-12">
-                                            <label class="card-body-title-header">Card Holder Name</label>
-                                            <div class="input-group mb-3">
-                                                <button class="bg-gr color-dg input-icon-button" disabled type="button"
-                                                    id="buttonAddon3">
-                                                    <i class='bx bxs-user'></i>
-                                                </button>
-                                                <input type="text" id="input4" class="form-control" required
-                                                aria-describedby="button-addon2" placeholder="Card Holder Name" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 col-sm-12 col-xs-12">
-                                            <label class="card-body-title-header">Card Payment Amount</label>
-                                            <div class="input-group mb-3">
-                                                <button class="bg-gr color-dg input-icon-button" disabled type="button"
-                                                    id="button-addon2">
-                                                    <i class='bi bi-123'></i>
-                                                </button>
-                                                <input type="text" id="card1" class="form-control" oninput="addSeparatorscard(this)" required
-                                                    aria-describedby="button-addon2" placeholder="Card Payment Amount" required>
-                                                 
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                            
-                            <!-- REMARKS-->
-
-                            <div class="card box-shadow-1">
-                                <div class="card-body">
-                                    <div class="row">
-
-                                        <div class="col-md-4 col-sm-12 col-xs-12" id="256">
-                                            <label class="card-body-title-header">Receipt Amount</label>
-                                            <div class="input-group mb-3">
-                                                <button class="bg-gr color-dg input-icon-button" disabled type="button"
-                                                    id="button-addon2">
-                                                    <i class='bi bi-123'></i>
-                                                </button>
-                                                <input type="text" id="Receipt1" class="form-control" oninput="addSeparatorsReceipt(this)" required
-                                                aria-describedby="button-addon2" placeholder="Receipt Amount" required>
-                                                 
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="col-md-7 col-sm-12 col-xs-12">
-                                            <label class="card-body-title-header">Remarks</label>
-                                            <div class="input-group mb-3">
-                                                <!-- <textarea  class="form-control" id="buttonAddon2" cols="50" rows="1" required
-                                                    aria-describedby="button-addon2" required>
-                                                </textarea> -->
-                                               <textarea rows="1" cols="50" class="form-control"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- FORM BUTTONS-->
-                            <div class="card box-shadow-1" class="container">
-                                <div class="card-body">
-                                    
-                                    <div class="row">
-                                        <div class="col-md-12 col-sm-12">
-                                            <div class="">
-                                               <div class="card-body">
-                                                <div class="" align="right">
-                                                    <!-- <button type="button" class="btn-settle">Settlement</button>
-                                                    <button onclick="myFunction()">TRY</button>
-                                                    <button onclick="window.location.href='https://www.google.com/'" type="button" class="btn-save">Save</button> -->
-                                                    <!-- <button type="button" class="btn-back">Back</button>
-                                                    <input type="submit" value="Save" class="btn-save" a href ="https://www.google.com/" required></a> -->
-
-                                                    <input type="submit" value="Settlement" class=" btn btn-settlement"> <a href="#" required></a>
-                                                    <input type="submit" value="Save" class="btn btn-save"> <a href="#" required></a>
-                                                    <input type="submit" value="Back" class="btn btn-back"> <a href="#" required></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                     </div>
-                </div>
-            </div>
-        </div>
-    </form>
-        <!-- End Page-content -->
-
-        <footer class="footer">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-6">
                         <script>
-                            document.write(new Date().getFullYear())
-                        </script> © CRYSBRO GROUP OF COMPANY(PVT)LTD
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="text-sm-end d-none d-sm-block">
-                            Crysbro IT Developer Team
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
-    <!-- end main content-->
-
-    </div>
-    <!-- END layout-wrapper -->
-
-
-
-
-    <!-- Theme Settings -->
-
-
-    <!-- JAVASCRIPT -->
-    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/libs/simplebar/simplebar.min.js"></script>
-    <script src="assets/libs/node-waves/waves.min.js"></script>
-    <script src="assets/libs/feather-icons/feather.min.js"></script>
-    <script src="assets/js/plugins.js"></script>
-
-    <!-- apexcharts -->
-    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-
-    <!-- Vector map-->
-    <script src="assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
-    <script src="assets/libs/jsvectormap/maps/world-merc.js"></script>
-
-    <!-- Dashboard init -->
-    <script src="assets/js/pages/dashboard.init.js"></script>
-
-    <!-- App js -->
-    <script src="assets/js/app.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap5-toggle@5.0.4/js/bootstrap5-toggle.ecmas.min.js"></script>
-
-
-    <!-- Data table cdn start -->
-
-    <script src="Js.js"></script>
-
-    <!-- Data table cdn end -->
-
-    <script>
-        $(document).ready(function () {
-            $('#my-select').select2();
-        });
-    </script>
-
-<!--THOUSAND SEPARATOR-->
-
-<!-- <script>
-    function formatNumber(input) {
-    // Remove existing separators and convert to number
-    let value = input.value.replace(/[^0-9]/g, '');
-    let number = parseFloat(value);
-  
-    // Check if the value is valid
-    if (!isNaN(number)) {
-    // Format the number with separators
-    let formattedNumber = number.toLocaleString();
-    
-    // Update the input value with the formatted number
-    input.value = formattedNumber;
-  }
-}
-
-</script> -->
-
-<!--THOUSAND SEPARATOR cheque-->
-
-<script>
-    function addSeparatorscheque() {
-        var numberInput = document.getElementById("cheque1");
-        var number = numberInput.value;
-
-        // Remove any existing separators
-        var cleanedNumber = number.replace(/,/g, "");
-
-        // Convert the cleaned number to a number format
-        var numericValue = parseFloat(cleanedNumber);
-
-        // Check if the numeric value is valid
-        if (isNaN(numericValue)) {
-            numberInput.value = "";
-        } else {
-            // Add thousand separators
-            var formattedNumber = numericValue.toLocaleString();
-
-            // Update the input value with separators
-            numberInput.value = formattedNumber;
-        }
-    }
-</script>
-
-<!--THOUSAND SEPARATOR Bank-->
-
-<script>
-    function addSeparatorsbank() {
-        var numberInput = document.getElementById("bank1");
-        var number = numberInput.value;
-
-        // Remove any existing separators
-        var cleanedNumber = number.replace(/,/g, "");
-
-        // Convert the cleaned number to a number format
-        var numericValue = parseFloat(cleanedNumber);
-
-        // Check if the numeric value is valid
-        if (isNaN(numericValue)) {
-            numberInput.value = "";
-        } else {
-            // Add thousand separators
-            var formattedNumber = numericValue.toLocaleString();
-
-            // Update the input value with separators
-            numberInput.value = formattedNumber;
-        }
-    }
-</script>
-
-
-<!--THOUSAND SEPARATOR Card Option-->
-
-
-<script>
-    function addSeparatorscard() {
-        var numberInput = document.getElementById("card1");
-        var number = numberInput.value;
-
-        // Remove any existing separators
-        var cleanedNumber = number.replace(/,/g, "");
-
-        // Convert the cleaned number to a number format
-        var numericValue = parseFloat(cleanedNumber);
-
-        // Check if the numeric value is valid
-        if (isNaN(numericValue)) {
-            numberInput.value = "";
-        } else {
-            // Add thousand separators
-            var formattedNumber = numericValue.toLocaleString();
-
-            // Update the input value with separators
-            numberInput.value = formattedNumber;
-        }
-    }
-</script>
-
-<!--THOUSAND SEPARATOR Cash-->
-
-<script>
-    function addSeparatorscash() {
-        var numberInput = document.getElementById("cash1");
-        var number = numberInput.value;
-
-        // Remove any existing separators
-        var cleanedNumber = number.replace(/,/g, "");
-
-        // Convert the cleaned number to a number format
-        var numericValue = parseFloat(cleanedNumber);
-
-        // Check if the numeric value is valid
-        if (isNaN(numericValue)) {
-            numberInput.value = "";
-        } else {
-            // Add thousand separators
-            var formattedNumber = numericValue.toLocaleString();
-
-            // Update the input value with separators
-            numberInput.value = formattedNumber;
-        }
-    }
-</script>
-
-<!--THOUSAND SEPARATOR Receipt-->
-
-<script>
-    function addSeparatorsReceipt() {
-        var numberInput = document.getElementById("Receipt1");
-        var number = numberInput.value;
-
-        // Remove any existing separators
-        var cleanedNumber = number.replace(/,/g, "");
-
-        // Convert the cleaned number to a number format
-        var numericValue = parseFloat(cleanedNumber);
-
-        // Check if the numeric value is valid
-        if (isNaN(numericValue)) {
-            numberInput.value = "";
-        } else {
-            // Add thousand separators
-            var formattedNumber = numericValue.toLocaleString();
-
-            // Update the input value with separators
-            numberInput.value = formattedNumber;
-        }
-    }
-</script>
-
-<!--REMOVING "e" CHARACTER FUNCTION-->
-
-<script>
-    function eCharacterRemover() {
-        var numberInput = document.getElementById("input400");
-        var number = numberInput.value;
-
-        // Remove any existing separators
-        var cleanedNumber = number.replace(/,/g, "");
-
-        // Convert the cleaned number to a number format
-        var numericValue = parseFloat(cleanedNumber);
-
-        // Check if the numeric value is valid
-        if (isNaN(numericValue)) {
-            numberInput.value = "";
-        }
-    }
-</script>
-
-<script>
-    function eCharacterRemover1() {
-        var numberInput = document.getElementById("numberinput1");
-        var number = numberInput.value;
-
-        // Remove any existing separators
-        var cleanedNumber = number.replace(/,/g, "");
-
-        // Convert the cleaned number to a number format
-        var numericValue = parseFloat(cleanedNumber);
-
-        // Check if the numeric value is valid
-        if (isNaN(numericValue)) {
-            numberInput.value = "";
-        }
-    }
-</script>
-
-
-<!-- NO EDITING ABOVE THIS LINE. THOUSAND SEPARATOR -->
- 
-<!--<script>
-    function handleDropdownChange() {
-      var dropdown = document.getElementById("dropdown");
-      var selectedOption = dropdown.value;
-      
-      var container1 = document.getElementById("container1");
-      var container2 = document.getElementById("container2");
-      var container3 = document.getElementById("container3");
-      var container4 = document.getElementById("container4");
-      
-      // Disable all input fields in all containers initially
-      disableAllInputs(container1);
-      disableAllInputs(container2);
-      disableAllInputs(container3);
-      disableAllInputs(container4);
-      
-      // Enable input fields based on the selected option and container
-      if (selectedOption === "option1") {
-        enableInputs(container1);
-      } else if (selectedOption === "option2") {
-        enableInputs(container2);
-      } else if (selectedOption === "option3") {
-        enableInputs(container3);
-      } else if (selectedOption === "option4") {
-        enableInputs(container4);
-      } 
-    }
-    
-    function disableAllInputs(container) {
-      var inputs = container.getElementsByTagName("input");
-      
-      for (var i = 0; i < inputs.length; i++) {
-        inputs[i].disabled = true;
-      }
-    }
-    
-    function enableInputs(container) {
-      var inputs = container.getElementsByTagName("input");
-      
-      for (var i = 0; i < inputs.length; i++) {
-        inputs[i].disabled = false;
-      }
-    }
-  </script>-->
-
-  <script>
-    function toggleContainers() {
-    // Get the selected option value
-    let selectedValue = document.getElementById("dropdown").value;
-
-    // Get all the container elements
-    let containers = document.getElementsByClassName("front");
-
-    // Hide all containers
-    for (let i = 0; i < containers.length; i++) {
-        containers[i].style.display = "none";
-    }
-
-    // Show the selected container
-    if (selectedValue) {
-        let selectedContainer = document.getElementById(selectedValue);
-        if (selectedContainer) {
-        selectedContainer.style.display = "block";
-        }
-    }
-    }
-
-</script>
-<script>
-
-    // HIDE  VIEW PAGE SOURCE AND INSPECT----->
-    document.addEventListener('contextmenu', (e) => e.preventDefault());
-  
-   function ctrlShiftKey(e, keyCode) {
-    return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
-  }
-  
-  document.onkeydown = (e) => {
-    // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
-    if (
-      event.keyCode === 123 ||
-      ctrlShiftKey(e, 'I') ||
-      ctrlShiftKey(e, 'J') ||
-      ctrlShiftKey(e, 'C') ||
-      (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
-    )
-      return false;
-  };
-
-  
-</script>
-
-<!-- <script>
-document.getElementById("button-addon2").value = "button-addon2";
-document.getElementById("buttonAddon1").value = "buttonAddon1";
-// document.getElementById("password").value = "";
-</script>
-
-<script>
-    function myFunction() {
-
-      document.getElementById("myReceiptDate").required = true;
-
-    }
-</script> -->
-
-<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-
-
-</body>
-</html>
+                            // Function to toggle password visibility
+                            function togglePasswordVisibility(inputId, buttonId) {
+                            const inputElement = document.getElementById(inputId);
+                            const buttonElement = document.getElementById(buttonId);
+                            
+                            if (inputElement.type === "password") {
+                                inputElement.type = "text";
+                                buttonElement.innerHTML = '<i class="bi bi-eye-slash"></i>'; // Change to eye-slash icon
+                            } else {
+                                inputElement.type = "password";
+                                buttonElement.innerHTML = '<i class="bi bi-eye"></i>'; // Change back to eye icon
+                            }
+                            }
+                        
+                            // Add event listener to the button elements
+                            document.getElementById("btnpassword100").addEventListener("click", function() {
+                            togglePasswordVisibility("password", "btnpassword100");
+                            });
+                        
+                            document.getElementById("btnconfirmpassword200").addEventListener("click", function() {
+                            togglePasswordVisibility("confirmPassword", "btnconfirmpassword200");
+                            });
+                        </script>
+
+                        <script>
+                            function eCharacterRemover() {
+                                var numberInput = document.getElementById("card2000");
+                                var number = numberInput.value;
+
+                                // Remove any existing separators
+                                var cleanedNumber = number.replace(/,/g, "");
+
+                                // Convert the cleaned number to a number format
+                                var numericValue = parseFloat(cleanedNumber);
+
+                                // Check if the numeric value is valid
+                                if (isNaN(numericValue)) {
+                                    numberInput.value = "";
+                                }
+                            }
+                        </script>
+                        
+
+                             <script>
+
+                                // HIDE  VIEW PAGE SOURCE AND INSPECT----->
+                                document.addEventListener('contextmenu', (e) => e.preventDefault());
+                            
+                            function ctrlShiftKey(e, keyCode) {
+                                return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+                            }
+                            
+                            document.onkeydown = (e) => {
+                                // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
+                                if (
+                                event.keyCode === 123 ||
+                                ctrlShiftKey(e, 'I') ||
+                                ctrlShiftKey(e, 'J') ||
+                                ctrlShiftKey(e, 'C') ||
+                                (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+                                )
+                                return false;
+                            };
+                            </script>
+
+
+
+
+
+
+                      </body>
+                      </html>

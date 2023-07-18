@@ -137,23 +137,23 @@ input::placeholder{
 
 
 
-.btn-settlement{
+.btn-CreateUser{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    background-color: var(--color-blue);
+}
+.btn-CreateUser:hover{
+    background-color: var(--color-royal-blue);
+    color: var(--color-white);
+}
+
+.btn-Clear{
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     background-color: var(--color-gray);
 }
-.btn-settlement:hover{
+.btn-Clear:hover{
     background-color: var(--color-dark-gray);
-    color: var(--color-white);
-}
-
-.btn-save{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    background-color: var(--color-green);
-}
-.btn-save:hover{
-    background-color: var(--color-dark-green);
     color: var(--color-white);
 }
 
